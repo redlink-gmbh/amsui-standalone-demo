@@ -14,7 +14,6 @@ export function moduleHttpLoaderFactory(http: HttpClient): ModuleTranslateLoader
   const options: IModuleTranslationOptions = {
     modules: [
       { baseTranslateUrl: baseTranslateUrl + '/amsui' },
-      { baseTranslateUrl },
     ],
   };
 

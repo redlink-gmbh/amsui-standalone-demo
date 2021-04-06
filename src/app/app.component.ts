@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
-import {SearchFieldConfig, SuggestionParameter} from '@redlink/amsui';
+import {SearchFieldConfig, SearchFieldText, SuggestionParameter} from '@redlink/amsui';
 import {delay} from 'rxjs/operators';
 import {Observable, of} from 'rxjs';
 
@@ -14,6 +14,9 @@ export class AppComponent {
   searchKeyword = '';
   searchFieldConfig: SearchFieldConfig = {
     asyncSuggestionDataProvider: this.fakeSearchSuggestions.bind(this),
+  };
+  searchFieldText: SearchFieldText = {
+    searchButtonText: 'Start search'
   };
 
   constructor(private readonly translateService: TranslateService) {
