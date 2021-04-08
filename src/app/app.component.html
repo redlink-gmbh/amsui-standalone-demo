@@ -1,7 +1,11 @@
 <h1>{{title}}</h1>
-<h3>Search field</h3>
-<amsui-search-field [config]="searchFieldConfig" (searchEvent)="handleSearchEvent($event)" [searchFieldText]="searchFieldText"></amsui-search-field>
+<h3>Search field - Find authors</h3>
+<p>We use a public API (namely <a href="https://openlibrary.org/">OpenLibrary</a>) for the suggestions of the authors, therefore we can not guarantee good results to your search query.</p>
+<amsui-search-field [config]="searchFieldConfig"
+                    (searchEvent)="handleSearchEvent($event)"
+                    [searchFieldText]="searchFieldText"></amsui-search-field>
 
+<p>Last search: <strong>{{ searchKeyword }}</strong></p>
 <h3>Other Components</h3>
 <ul>
   <li>facet group</li>
@@ -18,4 +22,4 @@
   <li>overlay loader</li>
 </ul>
 <p>You can find additional components in a storybook, that lets you interactively explore the library.</p>
-<a href="https://dev.redlink.io/amsui/?path=/story/documentation-standalone-usage--page">Go to other components</a>
+<a href="https://dev.redlink.io/amsui/?path=/story/documentation-standalone-usage--page">Go to AMSUI documentation</a>
